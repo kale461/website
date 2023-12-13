@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:url('https://img.freepik.com/premium-photo/opened-book-bible-background_112554-164.jpg')no-repeat center center/cover;
+        }
+        .sidebar{
+        margin-top: -305px;
+        overflow: auto;
+        width: 1500px;
+        padding: 5px;
+        position:fixed;
+
+        }
+        .sidebar li{
+        list-style: none;
+        float: left;
+        margin: 10px;
+        padding: 10px;
+        margin-left: 20px;
+
+        }
+        .sidebar li a{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 10px;
+        }
+       h1{
+        background-color: orange;
+        text-align: center;
+        padding: 10px;
+       }
+       .users li{
+        list-style: none;
+        float: left;
+        padding: 10px;
+        margin-left: 300px;
+
+        }
+        .users li a{
+        text-decoration: none;
+        padding: 10px;
+        font-weight: bold;
+        color: white;
+
+}
+
+       .users li a:hover{
+            background-color: white;
+           color: blue;
+            border-radius: 10%;
+            cursor: pointer;
+            }
+            section{
+                margin-top: 300px;
+            }
+            .chart{
+                margin-top: 200px;
+                border-radius: 20%;
+                background-color: teal;
+                padding: 5px;
+                margin-left: 700px;
+                width: 80px;
+                height: 30px;
+            }
+            .chart li{
+                list-style: none;
+            }
+            .chart li a{
+                padding: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .chart:hover{
+                background-color: blue;
+                color: white;
+                border-radius: 40%;
+                cursor: pointer;
+            }
+            .logout{
+                float: right;
+                margin-top: -650px;
+            }
+            .logout a{
+                text-decoration: none;
+                background-color: green;
+                width: 200px;
+                height: 200px;
+                border-radius:20%;
+                padding: 10px;
+                font-weight: bold;
+                color: white;
+            }
+            .logout:hover{
+                background-color: red;
+                color:white;
+                border-radius: 20%;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <ul class="sidebar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/services">Services</a></li>
+  </ul>
+    <section>
+        <h1>Users of System</h1>
+        <ul class="users">
+          <li><a href="/admin">Admin</a></li>
+          <li><a href="/student">Students</a></li>
+          <li><a href="/teachers">Teachers</a></li>
+          </ul>
+      </section>
+<br><br><br>
+<ul class="chart">
+    <li><a href="/index">BookChart</a></li>
+</ul>
+      <div class="logout"><a href="/">Log out</a></div>
+   
+</body>
+</html>

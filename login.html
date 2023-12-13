@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:teal;
+        }
+        #a{
+            visibility: hidden;
+            display: block;
+            
+        }
+        #b{
+            visibility: hidden;
+            display: block;
+        }
+        #c{
+            visibility: hidden;
+        }
+        .container{
+            margin: 30px auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color:skyblue;
+            border-radius: 50px;
+            margin-top: 100px;
+        }
+        .container input{
+            width: 95%;
+            padding: 10px;
+            
+        }
+        button{
+            margin-left: 100px;
+            width: 50%;
+            background-color: blue;
+            color: white;
+        }
+        button:hover{
+            background-color: darkblue;
+            color: white;
+        }
+        .form-group{
+            color:black;
+            font-weight: bolder;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Rowdies', cursive;
+            text-shadow: .1rem .1rem .2rem pink;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <h1>Create account</h1>
+            <div class="form-group">
+        <label>Name</label>
+            </div><br>
+        <input type="text" placeholder="Create Name" id="account"><br>
+        <label id="a">Invalid username</label>
+        <div class="form-group">
+        <label>Password</label>
+        </div><br>
+        <input type="password" placeholder="Create password" id="password"><br>
+        <label id="b">Invalid password</label>
+        <div class="form-group">
+        <label>Confirm password</label>
+        </div><br>
+        <input type="password2" placeholder="Confirm password" id="confirm password"><br>
+        <label id="c">Please enter correct password</label><br><br>
+        <button>Create</button>
+        </div>
+    
+   
+    <script>
+        function login(){
+            var account = document.getElementById("account");
+            var password = document.getElementById("password");
+            var confirm = document.getElementById("confirm password");
+
+            var regex1 = /^[a-zA-Z0-9-]$/;
+            var regex2 = /^([a-zA-Z0-9\.-@#$]{10,20})$/;
+            var regex3 = /^([a-zA-Z0-9\.-@#$]{10,20})$/;
+
+            if(account.value.trim()==="" || regex1.test(account)){
+                alert('Empty Values');
+                document.getElementById("a").innerHTML="Invalid username";
+                document.getElementById("a").style.visibility="visible";
+                document.getElementById("a").style.color="red";
+                account.style.border="3px solid red";
+                
+            }
+            else
+            {
+                document.getElementById("a").innerHTML="valid username";
+                document.getElementById("a").style.visibility="visible";
+                document.getElementById("a").style.color="green";
+                account.style.border="3px solid green"; 
+                
+            }
+            if(password.value.trim()==="" || regex2.test(password)){
+                alert('Empty Values');
+                document.getElementById("b").innerHTML="Invalid password";
+                document.getElementById("b").style.visibility="visible";
+                document.getElementById("b").style.color="red";
+                password.style.border="3px solid red";
+                
+            }
+            else
+            {
+                document.getElementById("b").innerHTML="valid password";
+                document.getElementById("b").style.visibility="visible";
+                document.getElementById("b").style.color="green";
+                password.style.border="3px solid green";
+                
+            }
+
+            if(confirm.value.trim()==="" || regex3.test(confirm)){
+                alert('Empty Values');
+                document.getElementById("c").innerHTML="Invalid Password";
+                document.getElementById("c").style.visibility="visible";
+                document.getElementById("c").style.color="red";
+                confirm.style.border="3px solid red";
+                
+            }
+            else
+            {
+                document.getElementById("c").innerHTML="valid password";
+                document.getElementById("c").style.visibility="visible";
+                document.getElementById("c").style.color="green";
+                confirm.style.border="3px solid green";
+                
+            }
+        
+
+        }
+    </script>
+</body>
+</html>

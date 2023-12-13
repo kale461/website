@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            margin-top: 100px;
+            height: 90vh;
+            background: url("https://images.pexels.com/photos/267586/pexels-photo-267586.jpeg?cs=srgb&dl=pexels-pixabay-267586.jpg&fm=jpg")no-repeat center center/cover;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: repeat(2,auto);
+            grid-gap: 1.5rem;
+            
+        }
+        .item{
+            padding: 3rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            
+            
+
+        }
+        .item a{
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+            color: yellow;
+            font-weight: bold;
+            font-size: 40px;
+            
+        }
+        a:hover{
+            background-color: teal;
+            color: orange;
+            border-radius: 10%;
+            cursor: pointer;
+        }
+        .logout{
+                float: right;
+                margin-top: -550px;
+            }
+            .logout a{
+                text-decoration: none;
+                background-color: green;
+                width: 200px;
+                height: 200px;
+                border-radius:20%;
+                padding: 10px;
+                font-weight: bold;
+                color: white;
+            }
+            .logout a:hover{
+                background-color: red;
+                color:white;
+                border-radius: 20%;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item"><a target="_blank" href="/11thphysics">11th Physics Book</a></div>
+        <div class="item"><a target="_blank" href="/11thchemistry">11th Chemistry Book</a></div>
+        <div class="item"><a target="_blank" href="/12thphysics">12th Physics Book</a></div>
+        <div class="item"><a target="_blank" href="/12thchemistry">12th Chemistry Book</a></div>
+        <div class="item"><a target="_blank" href="/BCA">BCA First Year Book</a></div>
+        <div class="item"><a target="_blank" href="/BCA2nd">BCA Second Year Book</a></div>
+    </div>
+
+    <div class="logout"><a href="/">Log out</a></div>
+
+</body>
+</html>

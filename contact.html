@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Book Store</title>
+  <style>
+    body{
+      background: url('https://png.pngtree.com/background/20210710/original/pngtree-fresh-chalkboard-stationery-ad-background-picture-image_970707.jpg')no-repeat center center/cover;
+      height: 100vh;
+    }
+    *{
+      padding: 0px;
+      margin:0px;
+    }
+.sidebar{
+overflow: auto;
+width: 1500px;
+padding: 5px;
+position:fixed;
+
+}
+.sidebar li{
+list-style: none;
+float: left;
+margin: 10px;
+padding: 10px;
+margin-left: 20px;
+
+}
+.sidebar li a{
+text-decoration: none;
+color: white;
+padding: 10px;
+}
+.sidebar li a:hover{
+background-color: skyblue;
+color:black;
+cursor: pointer;
+border-radius: 10%;
+}
+.error{
+  color: red;
+}
+#contactForm{
+  margin-left: 500px;
+  width: 500px;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 200px;
+  
+
+}
+input{
+  padding: 5px;
+  width: 260px;
+}
+#message{
+  margin-left: 30px;
+  height: 155px;
+  width: 260px;
+}
+button{
+  padding: 5px;
+  font-weight: bold;
+  background-color: blue;
+  color: white;
+  width: 70px;
+  margin-left: 20px;
+}
+button:hover{
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+label{
+  margin-left: -20px;
+  font-weight: bold;
+  color: white;
+}
+.label1{
+  margin-left: 40px;
+}
+  </style>
+</head>
+<body>
+    <ul class="sidebar">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/services">Services</a></li>
+  </ul><br><br><br>
+   <form id="contactForm">
+     <h1>Contact Us</h1><br><br>
+      <label for="name">Name: </label>
+      <input type="text" id="name" name="name" required><br>
+      <span id="nameError" class="error"></span><br>
+
+      <label for="email">Email: </label>
+      <input type="email" id="email" name="email" required><br>
+      <span id="emailError" class="error"></span><br>
+
+      <label class="label1" for="message">Message: </label><br><br>
+      <textarea id="message" name="message" aria-expanded="true" required></textarea><br>
+      <span id="messageError" class="error"></span><br>
+      <button type="submit">Submit</button>
+  </form><br><br>
+  <div class="logout"><a href="/home">Log out</a></div>
+
+  <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Prevent form submission
+
+          // Clear previous error messages
+          document.getElementById("nameError").textContent = "";
+          document.getElementById("emailError").textContent = "";
+          document.getElementById("messageError").textContent = "";
+
+          // Validate form fields
+          var name = document.getElementById("name").value;
+          var email = document.getElementById("email").value;
+          var message = document.getElementById("message").value;
+
+          if (!name) {
+              document.getElementById("nameError").textContent = "Please enter your name";
+              return;
+          }
+
+          if (!email) {
+              document.getElementById("emailError").textContent = "Please enter your email";
+              return;
+          }
+
+          if (!message) {
+              document.getElementById("messageError").textContent = "Please enter a message";
+              return;
+          }
+
+          // Form is valid, submit the form or perform additional actions
+          // Add your desired logic here, such as sending an email or storing the form data in a database
+
+          // For demonstration purposes, let's display a success message
+          alert("Thank you for your message! We will get back to you soon.");
+          document.getElementById("contactForm").reset(); // Reset the form
+      });
+  </script>
+</body>
+</html>
+  
+</body>
+</html>
